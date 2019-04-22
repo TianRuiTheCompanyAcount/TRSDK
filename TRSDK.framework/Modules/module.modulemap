@@ -1,0 +1,6 @@
+framework module TRSDK {
+  umbrella header "TRSDK.h"
+
+  export *
+  module * { export * }
+}
