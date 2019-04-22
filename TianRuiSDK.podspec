@@ -23,7 +23,7 @@ This article mainly describes how to use the client sdk payment interface for th
   spec.author            = { "TianRui" => "fdpuvqo@yeah.net" }
   spec.platform    	 = :ios, "9.0"
   spec.source 		 = { :git => "https://github.com/TianRuiTheCompanyAcount/TRSDK.git", :tag => "#{spec.version}" }
-
+  spec.vendored_frameworks  = "TRSDK.Framework"
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -33,8 +33,8 @@ This article mainly describes how to use the client sdk payment interface for th
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  #spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -59,7 +59,7 @@ This article mainly describes how to use the client sdk payment interface for th
   #  the lib prefix of their name.
   #
 
-  spec.framework  = "SomeFramework"
+  # spec.framework  = "TRSDK.Framework"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
 
   # spec.library   = "iconv"
@@ -72,9 +72,16 @@ This article mainly describes how to use the client sdk payment interface for th
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # spec.requires_arc = true
+  spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
+  spec.dependency 'Firebase/Core'
+  spec.dependency 'Firebase/Auth'
+  spec.dependency 'GoogleSignIn'
+  spec.dependency 'FBSDKLoginKit'
+  spec.dependency 'Masonry', '~> 1.1.0'
+  spec.dependency 'AFNetwork', '~> 0.1.0'
+  spec.dependency 'MBProgressHUD', '~> 0.9.2'
+  spec.dependency 'FCUUID', '~> 1.3.1'
 
 end
