@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "TianRuiSDK"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "TianRui TRSDK"
   spec.description  = <<-DESC
 			TRSDK is primarily used to provide portable, secure and reliable account systems and payment services to third-party applications. this
@@ -24,6 +24,8 @@ This article mainly describes how to use the client sdk payment interface for th
   spec.platform    	 = :ios, "9.0"
   spec.source 		 = { :git => "https://github.com/TianRuiTheCompanyAcount/TRSDK.git", :tag => "#{spec.version}" }
   spec.vendored_frameworks  = "TRSDK.Framework"
+  spec.requires_arc = true
+  spec.resources = "Resources/*.png"
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -72,7 +74,7 @@ This article mainly describes how to use the client sdk payment interface for th
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  spec.requires_arc = true
+
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   spec.dependency 'Firebase/Core'
