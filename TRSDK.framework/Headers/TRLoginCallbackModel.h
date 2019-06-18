@@ -10,17 +10,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TRLoginCallbackModel : NSObject
-
 @property (nonatomic ,copy)NSString *userUid;//用户ID
-
-
-
+@property (nonatomic ,copy)NSString *session;//session
 
 
 - (id)initContentWithDic:(NSDictionary *)jsonDic;
-
 - (void)setAttributes:(NSDictionary *)jsonDic;
-
 - (NSDictionary *)attributeMapDictionary:(NSDictionary *)jsonDic;
 
 @end
