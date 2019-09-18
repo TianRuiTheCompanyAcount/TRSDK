@@ -92,6 +92,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)applicationOpenURL:(nonnull NSURL *)url
                    options:(nonnull NSDictionary<NSString *, id> *)options;
 
+
+- (BOOL)application:(UIApplication *)app openURL:(nonnull NSURL *)url options:(nonnull NSDictionary<NSString *, id> *)options;
+
 @end
 
 NS_ASSUME_NONNULL_END
