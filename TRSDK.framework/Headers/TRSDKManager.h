@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "TRLoginCallbackModel.h"
+#import <Adjust/Adjust.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TRSDKManager : NSObject
+@interface TRSDKManager : NSObject<AdjustDelegate>
 
 
 /**
@@ -26,9 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  初始化SDK
 
- @param projectId projectId description
- @param appid appid description
- @param version version description
+ @param projectId projectId description 项目id
+ @param appid appid description 应用id
+ @param version version description 版本号
  @param success {@"code":0,@"msg":@"ok"} //初始化成功
  @param failure {@"code":-1,@"msg":@"error msg"} //初始化失败
  */
@@ -89,10 +90,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-- (BOOL)applicationOpenURL:(nonnull NSURL *)url
-                   options:(nonnull NSDictionary<NSString *, id> *)options;
-
-
+/// openUrl
+/// @param app app description
+/// @param url url description
+/// @param options options description
 - (BOOL)application:(UIApplication *)app openURL:(nonnull NSURL *)url options:(nonnull NSDictionary<NSString *, id> *)options;
 
 @end
