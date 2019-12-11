@@ -80,7 +80,7 @@ This article mainly describes how to use the client sdk payment interface for th
   spec.dependency 'Firebase/Core'
   spec.dependency 'Firebase/Auth'
   spec.dependency 'GoogleSignIn'
-  spec.dependency 'FBSDKLoginKit'
+  spec.dependency 'FBSDKLoginKit', '5.11.1' 
   spec.dependency 'Masonry', '~> 1.1.0'
   spec.dependency 'AFNetwork', '~> 0.1.0'
   spec.dependency 'MBProgressHUD', '~> 0.9.2'
