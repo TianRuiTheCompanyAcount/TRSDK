@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "TianRuiSDK"
-  spec.version      = "0.1.46"
+  spec.version      = "0.1.50"
   spec.summary      = "TianRui TRSDK"
   spec.description  = <<-DESC
 			TRSDK is primarily used to provide portable, secure and reliable account systems and payment services to third-party applications. this
