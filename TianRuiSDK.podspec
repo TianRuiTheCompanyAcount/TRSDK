@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "TianRuiSDK"
-  spec.version      = "0.1.540"
+  spec.version      = "0.1.541"
   spec.summary      = "TianRui TRSDK"
   spec.description  = <<-DESC
 			TRSDK is primarily used to provide portable, secure and reliable account systems and payment services to third-party applications. this
@@ -86,7 +86,6 @@ This article mainly describes how to use the client sdk payment interface for th
   spec.dependency 'MBProgressHUD', '~> 0.9.2'
   spec.dependency 'FCUUID', '~> 1.3.1'
   spec.dependency 'UMCCommon'
-  spec.dependency 'UMCSecurityPlugins'
   spec.dependency 'UMCAnalyticsGame', '~> 6.0.3+G'
   spec.dependency 'UMCCommonLog'
   spec.dependency 'Adjust', '~> 4.15.0'
