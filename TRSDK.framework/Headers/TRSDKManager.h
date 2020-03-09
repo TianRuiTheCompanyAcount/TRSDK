@@ -54,6 +54,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
+/// 登录游戏成功通知SDK
+/// @param userId 游戏中用户ID
+/// @param name 角色名
+/// @param area 角色所在区服
+/// @param level 角色等级
+/// @param vlevel 角色VIP等级
+- (void)gameLoginWithUserId:(NSString *)userId
+                   userName:(NSString *)name
+                   userArea:(NSString *)area
+                  userLevel:(NSString *)level
+                  uVIPLevel:(NSString *)vlevel;
+
+
+
 
 /// 购买接口
 /// @param orderId 游戏订单id
