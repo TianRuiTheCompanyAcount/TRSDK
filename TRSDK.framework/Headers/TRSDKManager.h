@@ -77,6 +77,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param productPrice 商品价格
 /// @param userName 用户角色名字
 /// @param userArea 用户角色所在区服
+/// @param userID 游戏角色id
 /// @param attachOne 附加字段1，可选
 /// @param attachTwo 附加字段2，可选
 /// @param success {@"code":0,@"msg":@"ok",@"orderId":@"orderId"}
@@ -88,6 +89,7 @@ NS_ASSUME_NONNULL_BEGIN
                 prodcutPrice:(NSString *)productPrice
                     userName:(NSString *)userName
                     userArea:(NSString *)userArea
+                      userID:(NSString *)userID
                    attachOne:(NSString * _Nullable)attachOne
                    attachTwo:(NSString * _Nullable)attachTwo
                      success:(void (^)(NSDictionary *successDict))success
