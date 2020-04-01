@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "TianRuiSDK"
-spec.version="0.1.560"
+spec.version="0.1.561"
   spec.summary      = "TianRui TRSDK"
   spec.description  = <<-DESC
 			TRSDK is primarily used to provide portable, secure and reliable account systems and payment services to third-party applications. this
@@ -77,9 +77,11 @@ This article mainly describes how to use the client sdk payment interface for th
 
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  spec.dependency 'Firebase', '6.20.0'	
   spec.dependency 'Firebase/Core'
   spec.dependency 'Firebase/Auth'
   spec.dependency 'GoogleSignIn'
+  spec.dependency 'GoogleDataTransport', '5.0.0'
   spec.dependency 'FBSDKLoginKit'
   spec.dependency 'Masonry', '~> 1.1.0'
   spec.dependency 'AFNetwork', '~> 0.1.0'
@@ -89,7 +91,6 @@ This article mainly describes how to use the client sdk payment interface for th
   spec.dependency 'UMCAnalyticsGame', '~> 6.0.3+G'
   spec.dependency 'UMCCommonLog'
   spec.dependency 'UMCSecurityPlugins'
-  spec.dependency 'Adjust', '~> 4.15.0'
   spec.dependency 'CocoaAsyncSocket', '~> 7.6.3'
 
 end
