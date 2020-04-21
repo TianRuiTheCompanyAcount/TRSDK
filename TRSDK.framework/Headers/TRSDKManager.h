@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "TRLoginCallbackModel.h"
-#import <Adjust/Adjust.h>
+#import <AppsFlyerLib/AppsFlyerTracker.h>
+
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TRSDKManager : NSObject<AdjustDelegate>
+@interface TRSDKManager : NSObject<AppsFlyerTrackerDelegate>
 
 
 /**
@@ -21,7 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
  @return TRSDKManager
  */
 + (instancetype)manager;
-
 
 
 /**
@@ -38,7 +38,6 @@ NS_ASSUME_NONNULL_BEGIN
                      version:(NSString *)version
                  success:(void (^)(NSDictionary *successDict))success
                  failure:(void (^)(NSDictionary *failureDict))failure;
-
 
 
 
@@ -76,6 +75,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param productAttr 商品描述
 /// @param productPrice 商品价格
 /// @param userName 用户角色名字
+/// @param userLevel 角色等级
 /// @param userArea 用户角色所在区服
 /// @param userID 游戏角色id
 /// @param attachOne 附加字段1，可选
@@ -88,6 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
                  productAttr:(NSString *)productAttr
                 prodcutPrice:(NSString *)productPrice
                     userName:(NSString *)userName
+                   userLevel:(NSString *)userLevel
                     userArea:(NSString *)userArea
                       userID:(NSString *)userID
                    attachOne:(NSString * _Nullable)attachOne
@@ -96,6 +97,19 @@ NS_ASSUME_NONNULL_BEGIN
                      failure:(void (^)(NSDictionary *failureDict))failure;
 
 
+/// 事件追踪方法
+/// @param eventName 事件名称： eg:  "loginEvnet"
+/// @param dict 事件关联的参数： eg: @{user:123,...}
+- (void)TRTrackEvent:(NSString *)eventName parameter:(NSDictionary *)dict;
+
+
+
+
+/// /// 分享游戏截图
+/// @param imagePath 分享的图片路径
+/// @param success 分享成功 status = 0
+/// @param failure 分享失败
+- (void)TRShare:(NSString *)imagePath success:(void (^)(NSInteger status))success failure:(void (^)(id error))failure;
 
 
 /**

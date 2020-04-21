@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <TRSDK/TRSDKManager.h>
 #import <TRSDK/TRLoginCallbackModel.h>
-#import <Adjust/Adjust.h>
+
 
 
 //! Project version number for TRSDK.
