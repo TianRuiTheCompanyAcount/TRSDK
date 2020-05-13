@@ -44,11 +44,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /// 登录回调
-/// @param success model model.userUid model.session
+/// @param success model model.userUid 用户唯一id, model.session 用户校验session
 /// @param failure {@"code":-1,@"msg":@"error msg"}
 - (void)loginWithSuccess:(void (^)(TRLoginCallbackModel *model))success
                  failure:(void (^)(id error))failure;
-
 
 
 
@@ -66,14 +65,12 @@ NS_ASSUME_NONNULL_BEGIN
                   uVIPLevel:(NSString *)vlevel;
 
 
-
-
 /// 购买接口
 /// @param orderId 游戏订单id
 /// @param productId 商品id
 /// @param productName 商品名字
 /// @param productAttr 商品描述
-/// @param productPrice 商品价格
+/// @param productPrice 商品价格单位美分
 /// @param userName 用户角色名字
 /// @param userLevel 角色等级
 /// @param userArea 用户角色所在区服
@@ -106,7 +103,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /// /// 分享游戏截图
-/// @param imagePath 分享的图片路径
+/// @param imagePath 分享的图片沙箱路径
 /// @param success 分享成功 status = 0
 /// @param failure 分享失败
 - (void)TRShare:(NSString *)imagePath success:(void (^)(NSInteger status))success failure:(void (^)(id error))failure;
