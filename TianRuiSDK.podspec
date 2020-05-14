@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "TianRuiSDK"
-spec.version="0.1.570"
+spec.version="0.1.571"
   spec.summary      = "TianRui TRSDK"
   spec.description  = <<-DESC
 			TRSDK is primarily used to provide portable, secure and reliable account systems and payment services to third-party applications. this
@@ -82,7 +82,7 @@ This article mainly describes how to use the client sdk payment interface for th
   spec.dependency 'GoogleSignIn'
   spec.dependency 'FBSDKLoginKit'
   spec.dependency 'Masonry', '~> 1.1.0'
-  spec.dependency 'AFNetwork', '~> 0.1.0'
+  spec.dependency 'AFNetworking', '~> 4.0.1'
   spec.dependency 'MBProgressHUD', '~> 0.9.2'
   spec.dependency 'FCUUID', '~> 1.3.1'
   spec.dependency 'UMCCommon'
