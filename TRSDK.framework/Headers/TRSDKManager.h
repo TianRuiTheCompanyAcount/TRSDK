@@ -123,6 +123,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param options options description
 - (BOOL)application:(UIApplication *)app openURL:(nonnull NSURL *)url options:(nonnull NSDictionary<NSString *, id> *)options;
 
+
+
+///应用回到前端
+- (void)applicationDidBecomeActive:(UIApplication *)application;
+
 @end
 
 NS_ASSUME_NONNULL_END
