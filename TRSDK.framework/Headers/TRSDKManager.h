@@ -109,6 +109,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)TRShare:(NSString *)imagePath success:(void (^)(NSInteger status))success failure:(void (^)(id error))failure;
 
 
+/// 通过FB 邀请好友
+/// @param success 被邀请人的fb userid
+/// @param failure 邀请失败
+- (void)inviteFBFriendWithSuccess:(void (^)(NSArray *friendIds))success failure:(void (^)(id error))failure;
+
+
 /**
  退出登录
  @return 退出的结果 Bool类型
@@ -127,6 +133,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 ///应用回到前端
 - (void)applicationDidBecomeActive:(UIApplication *)application;
+
+
+
+
 
 @end
 
