@@ -53,7 +53,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /// 登录游戏成功通知SDK
-/// @param userId 游戏中用户ID
+/// @param userId 角色ID
 /// @param name 角色名
 /// @param area 角色所在区服
 /// @param level 角色等级
