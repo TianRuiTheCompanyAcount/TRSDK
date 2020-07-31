@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "TianRuiSDK"
-spec.version="0.1.578"
+spec.version="0.1.579"
   spec.summary      = "TianRui TRSDK"
   spec.description  = <<-DESC
 			TRSDK is primarily used to provide portable, secure and reliable account systems and payment services to third-party applications. this
@@ -77,16 +77,22 @@ This article mainly describes how to use the client sdk payment interface for th
 
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  spec.dependency 'Firebase/Core'
-  spec.dependency 'Firebase/Auth'
-  spec.dependency 'GoogleSignIn'
-  spec.dependency 'FBSDKLoginKit'
-  spec.dependency 'Masonry', '~> 1.1.0'
-  spec.dependency 'AFNetworking', '~> 4.0.1'
-  spec.dependency 'MBProgressHUD', '~> 0.9.2'
-  spec.dependency 'FCUUID', '~> 1.3.1'
-  spec.dependency 'CocoaAsyncSocket', '~> 7.6.3'
-  spec.dependency 'FBSDKShareKit'
-  spec.dependency 'AppsFlyerFramework'
+  spec.dependency 'Firebase/Core', '6.29.0'
+  spec.dependency 'Firebase/Auth', '6.29.0'
+  spec.dependency 'Firebase/Analytics', '6.29.0'
+  spec.dependency 'Firebase/AdMob', '6.29.0'
+  spec.dependency 'GoogleMobileAdsMediationFacebook','5.10.0.0'
+  spec.dependency 'GoogleMobileAdsMediationAppLovin', '6.13.0.0'
+  spec.dependency 'GoogleMobileAdsMediationInMobi', '9.0.7.2'
+  spec.dependency 'GoogleMobileAdsMediationIronSource', '6.17.0.0'
+  spec.dependency 'GoogleMobileAdsMediationUnity', '3.4.6.0'
+  spec.dependency 'FBSDKShareKit', '7.1.1'
+  spec.dependency 'FBSDKLoginKit', '7.1.1'
+  spec.dependency 'Masonry', '1.1.0'
+  spec.dependency 'AFNetworking', '4.0.1'
+  spec.dependency 'MBProgressHUD', '1.2.0'
+  spec.dependency 'FCUUID', '1.3.1'
+  spec.dependency 'CocoaAsyncSocket', '7.6.3'
+  spec.dependency 'AppsFlyerFramework', '5.4.1'
 
 end

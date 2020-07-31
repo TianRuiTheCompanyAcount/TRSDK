@@ -135,8 +135,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)applicationDidBecomeActive:(UIApplication *)application;
 
 
+//加载广告
+- (void)loadAdmobReward;
 
 
+
+
+/// 展示激励广告
+/// @param success 用户成功观看广告
+/// @param failure 用户未成功观看广告
+- (void)showAdmobRewardWithSuccess:(void (^)(NSInteger status))success failure:(void (^)(id error))failure;
 
 @end
 
