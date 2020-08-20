@@ -142,9 +142,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /// 展示激励广告
-/// @param success 用户成功观看广告
-/// @param failure 用户未成功观看广告
-- (void)showAdmobRewardWithSuccess:(void (^)(NSInteger status))success failure:(void (^)(id error))failure;
+/// @param success 用户已成功观看广告 （status = 1）
+/// @param failure 用户未完成观看广告：errorCode:1: 广告未加载完成，提示用户稍后再试  2：广告观看未完成，提示用户观看时间不够， 3.系统错误
+- (void)showAdmobRewardWithSuccess:(void (^)(NSInteger status))success failure:(void (^)(NSInteger errorCode))failure;
 
 @end
 
