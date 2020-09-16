@@ -50,6 +50,10 @@ NS_ASSUME_NONNULL_BEGIN
                  failure:(void (^)(id error))failure;
 
 
+/// 快速登录(游客身份),当用户充值前再提示用户绑定身份
+/// @param success model model.userUid 用户唯一id, model.session 用户校验session
+/// @param failure {@"code":-1,@"msg":@"error msg"}
+- (void)quickCustomerLogin:(void (^)(TRLoginCallbackModel *model))success failure:(void (^)(id error))failure;
 
 
 /// 登录游戏成功通知SDK
@@ -131,6 +135,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
+
 ///应用回到前端
 - (void)applicationDidBecomeActive:(UIApplication *)application;
 
@@ -143,8 +148,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 展示激励广告
 /// @param success 用户已成功观看广告 （status = 1）
-/// @param failure 用户未完成观看广告：errorCode:1: 广告未加载完成，提示用户稍后再试  2：广告观看未完成，提示用户观看时间不够， 3.系统错误
+/// @param failure 用户未完成观看广告：errorCode:1: 广告未加载完成，提示用户稍后再试  2：广告观看未完成，提示用户观看时间不够， 3.加载错误
 - (void)showAdmobRewardWithSuccess:(void (^)(NSInteger status))success failure:(void (^)(NSInteger errorCode))failure;
+
+
+/// 展示插屏广告
+/// @param success 用户已成功观看广告 （status = 1）
+/// @param failure 用户未完成观看广告：errorCode:1: 广告未加载完成，提示用户稍后再试  2.加载错误
+- (void)showInsetAdmobRewardWithSuccess:(void (^)(NSInteger status))success failure:(void (^)(NSInteger errorCode))failure;
 
 @end
 
